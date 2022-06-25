@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1048687826097",
+    "project_id": "pbb-auth-f145e",
+    "storage_bucket": "pbb-auth-f145e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048687826097:android:6ba28ca06a0f17b6f5be90",
+        "android_client_info": {
+          "package_name": "com.example.tokopedia_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048687826097-qmtsicm7e109dgrgmbor32asll9fnojc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tokopedia_clone",
+            "certificate_hash": "25f71ac4aba90b5df19a0f8db7fbd8350af270ae"
+          }
+        },
+        {
+          "client_id": "1048687826097-2gr1piidn94u4hgnqcumso9ugpa5f059.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO3gbjzXoyV69YMo5zmYYsHnXRVKF-Gpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048687826097-2gr1piidn94u4hgnqcumso9ugpa5f059.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
