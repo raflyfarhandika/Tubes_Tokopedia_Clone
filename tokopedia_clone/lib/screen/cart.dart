@@ -5,6 +5,7 @@ import "package:tokopedia_clone/components/theme.dart";
 import "package:tokopedia_clone/models/produk.dart";
 import "package:tokopedia_clone/components/date_time_extension.dart";
 import "package:tokopedia_clone/components/keranjang_card.dart";
+import "package:tokopedia_clone/components/tampil_produk.dart";
 
 class CartPage extends StatefulWidget {
   @override
@@ -107,7 +108,7 @@ class _CartPageState extends State<CartPage> {
                       Wrap(
                         runSpacing: 10,
                         spacing: 10,
-                        children: listOfKeranjang(widthSize, heightSize),
+                        children: listOfProduk(widthSize, heightSize),
                       ),
                     ],
                   ),
@@ -326,7 +327,7 @@ class _CartPageState extends State<CartPage> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Beli (${keranjangProduk.length.toString()})",
+                                  "Beli (${dummyProduk.length.toString()})",
                                   style: whiteTextFont.copyWith(
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -356,6 +357,18 @@ class _CartPageState extends State<CartPage> {
         widthSize: widthSize,
         heightSize: heightSize,
         kategori: e,
+      ),
+    ).toList();
+  }
+
+  List<Widget> listOfProduk(double widthSize, double heightSize) {
+    List<Produk> newProduk = dummyProduk;
+
+    return newProduk.map(
+      (e) => ProdukData(
+        widthSize: widthSize,
+        heightSize: heightSize,
+        produk: e,
       ),
     ).toList();
   }

@@ -42,9 +42,7 @@ class _MainPageState extends State<MainPage> {
                   });
                 },
                 children: [
-                  //HomePage(),
-                  //FeedPage(),
-                  //OfficialStorePage(),
+                  FeedPage(),
                   CartPage(),
                   AkunPage(),
                 ],
@@ -89,64 +87,60 @@ class _MainPageState extends State<MainPage> {
           });
         },
         items: [
+          // BottomNavigationBarItem(
+          //   label: "Home",
+          //   icon: Container(
+          //     height: 24,
+          //     margin: EdgeInsets.only(bottom: 2),
+          //     child: SvgPicture.asset((bottomNavbarIndex == 0)
+          //       ? "assets/icons/home_selected.svg"
+          //       : "assets/icons/home.svg"),
+          //   ),
+          // ),
           BottomNavigationBarItem(
-            label: "Home",
+            label: "Feed",
             icon: Container(
               height: 24,
               margin: EdgeInsets.only(bottom: 2),
               child: SvgPicture.asset((bottomNavbarIndex == 0)
-                  ? "assets/icons/home_selected.svg"
-                  : "assets/icons/home.svg"),
-              ),
-            ),
-            BottomNavigationBarItem(
-              label: "Feed",
-              icon: Container(
-                height: 24,
-                margin: EdgeInsets.only(bottom: 2),
-                child: SvgPicture.asset((bottomNavbarIndex == 1)
-                  ? "assets/icons/feed_selected.svg"
-                  : "assets/icons/feed.svg"),
-                ),
-              ),
-              BottomNavigationBarItem(
-                label : "official store",
-                icon: Container(
-                  height: 24,
-                  margin: EdgeInsets.only(bottom: 2),
-                  child: SvgPicture.asset((bottomNavbarIndex == 2)
-                    ? "assets/icons/official_selected.svg"
-                    : "assets/icons/official.svg"), 
-                  ),
-                ),
-                BottomNavigationBarItem(
-                  label: "Keranjang",
-                  icon: Container(
-                    height: 24,
-                    margin: EdgeInsets.only(bottom: 2),
-                    child: SvgPicture.asset(
-                      (bottomNavbarIndex == 3)
-                      ? "assets/icons/keranjang_selected.svg"
-                      : "assets/icons/keranjang.svg",
-                    ),
-                  ),
-                ),
-                BottomNavigationBarItem(
-                  label: "Akun",
-                  icon: Container(
-                    margin: EdgeInsets.only(bottom: 2),
-                    height: 24,
-                    child: SvgPicture.asset(
-                      (bottomNavbarIndex == 4)
-                        ? "assets/icons/akun_selected.svg"
-                        : "assets/icons/akun.svg",
-                    ),
-                  ),
-                ),
-              ],
+                ? "assets/icons/feed_selected.svg"
+                : "assets/icons/feed.svg"),
             ),
           ),
-        );
+          // BottomNavigationBarItem(
+          //   label : "official store",
+          //   icon: Container(
+          //     height: 24,
+          //     margin: EdgeInsets.only(bottom: 2),
+          //     child: SvgPicture.asset((bottomNavbarIndex == 2)
+          //       ? "assets/icons/official_selected.svg"
+          //       : "assets/icons/official.svg"), 
+          //     ),
+          // ),
+          BottomNavigationBarItem(
+            label: "Keranjang",
+            icon: Container(
+              height: 24,
+              margin: EdgeInsets.only(bottom: 2),
+              child: SvgPicture.asset((bottomNavbarIndex == 1)
+                ? "assets/icons/keranjang_selected.svg"
+                : "assets/icons/keranjang.svg"),
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: "Akun",
+            icon: Container(
+              margin: EdgeInsets.only(bottom: 2),
+              height: 24,
+              child: SvgPicture.asset((bottomNavbarIndex == 2)
+                ? "assets/icons/akun_selected.svg"
+                : "assets/icons/akun.svg"),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
       
   

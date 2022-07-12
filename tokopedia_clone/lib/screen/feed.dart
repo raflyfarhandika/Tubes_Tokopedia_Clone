@@ -5,12 +5,12 @@ import "package:tokopedia_clone/models/produk.dart";
 
 
 class FeedPage extends StatefulWidget {
-  FeedPage({
-    required Key key,
-    required this.controller,
-  }) : super(key: key);
+  // FeedPage({
+  //   required Key key,
+  //   required this.controller,
+  // }) : super(key: key);
 
-  final ScrollController controller;
+  // final ScrollController controller;
 
   @override
   _FeedPageState createState() => _FeedPageState();

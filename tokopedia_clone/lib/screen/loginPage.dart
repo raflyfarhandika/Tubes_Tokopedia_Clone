@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:tokopedia_clone/screen/mainPage.dart';
+import 'package:tokopedia_clone/screen/registrationPage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,6 +18,9 @@ class _LoginPageState extends State<LoginPage> {
   // editing controller
   final TextEditingController emailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
+
+  //hide password
+  bool isHidePassword = true;
 
   // firebase
   final _auth = FirebaseAuth.instance;
@@ -65,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
       final passwordField = TextFormField(
         autofocus: false,
         controller: passwordController,
-        obscureText: true,
+        obscureText: isHidePassword,
         validator: (value) {
           RegExp regex = new RegExp(r'^.{6,}$');
           if (value!.isEmpty) {
@@ -81,6 +85,15 @@ class _LoginPageState extends State<LoginPage> {
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.vpn_key),
+          suffixIcon: InkWell(
+            onTap: () {
+              setState(() {
+                isHidePassword = !isHidePassword;
+              });
+            },
+            child: Icon(
+              Icons.visibility)
+            ),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Password",
           labelStyle: TextStyle(
@@ -130,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "assets/logo.png",
+                          "assets/img/logo-tokped.png",
                           fit: BoxFit.contain,
                         )),
                     SizedBox(height: 45),
@@ -157,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          LoginPage()));
+                                          RegistrationPage()));
                             },
                             child: Text(
                               "SignUp",
